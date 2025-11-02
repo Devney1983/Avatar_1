@@ -30,6 +30,11 @@ ApplicationWindow {
                 text: "Manual Drone Control"
                 onClicked: stackLayout.currentIndex = 2
             }
+            TabButton {
+                text: "Artificial Intelligence"
+                onClicked: stackLayout.currentIndex = 3
+            }
+
         }
 
         // Stack layout for different views
@@ -81,6 +86,10 @@ ApplicationWindow {
                                 height: 130
                                 anchors.centerIn: parent
                                 fillMode: Image.PreserveAspectFit
+                            }
+                            // Artificial Intelligence view
+                            Loader {
+                                source: "ArtificialIntelligenceTab.qml"
                             }
 
                             Button {
